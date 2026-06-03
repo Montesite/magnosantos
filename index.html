@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magno Santos | MS Serviços</title>
+  <meta name="description" content="Soluções completas em instalações elétricas, automação, segurança eletrônica, CFTV e redes lógicas. Proteção, tecnologia e eficiência para residências, empresas e indústrias em Pernambuco.">
+  <meta property="og:title" content="Magno Santos | MS Serviços">
+  <meta property="og:description" content="Soluções completas em instalações elétricas, automação, segurança eletrônica, CFTV e redes lógicas. Proteção, tecnologia e eficiência.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.magnosantoscosta.com.br">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Impede rolagem lateral — todas as camadas */
+    html { overflow-x: hidden; max-width: 100%; }
+    body { width: 100%; max-width: 100vw; position: relative; }
+
+    /* Toda section é um contexto de clipping horizontal */
+    section { overflow-x: hidden; }
+
+    /* Nenhuma imagem ultrapassa o container */
+    img { max-width: 100%; height: auto; display: block; }
+
+    :root {
+      --blue: #1B62C0;
+      --blue-dark: #124A9A;
+      --blue-light: #2B78D8;
+      --blue-pale: #EBF2FB;
+      --white: #FFFFFF;
+      --gray-50: #F7F9FC;
+      --gray-100: #EEF2F8;
+      --gray-200: #DDE5F0;
+      --gray-400: #8FA3BD;
+      --gray-600: #4A6080;
+      --gray-800: #1E2C3D;
+      --gray-900: #0F1825;
+      --shadow-sm: 0 1px 3px rgba(27,98,192,.10);
+      --shadow-md: 0 4px 20px rgba(27,98,192,.14);
+      --shadow-lg: 0 10px 40px rgba(27,98,192,.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--gray-800);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(10, 20, 40, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: all .3s ease;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-wrap img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-text span:first-child {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--white);
+      letter-spacing: .5px;
+    }
+
+    .logo-text span:last-child {
+      font-size: .7rem;
+      color: var(--blue-light);
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    nav { display: flex; align-items: center; gap: 6px; }
+
+    nav a {
+      color: rgba(255,255,255,.75);
+      text-decoration: none;
+      font-size: .875rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all .2s;
+    }
+
+    nav a:hover { color: var(--white); background: rgba(255,255,255,.08); }
+
+    .nav-vitrine {
+      border: 1px solid rgba(43,120,216,.45) !important;
+      color: var(--blue-light) !important;
+      border-radius: 8px;
+      display: inline-flex !important;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-vitrine:hover {
+      background: rgba(27,98,192,.18) !important;
+      border-color: var(--blue-light) !important;
+      color: var(--white) !important;
+    }
+
+    .nav-cta {
+      background: var(--blue) !important;
+      color: var(--white) !important;
+      padding: 8px 18px !important;
+      border-radius: 8px;
+      margin-left: 8px;
+    }
+
+    .nav-cta:hover { background: var(--blue-light) !important; }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* ─── HERO ─── */
+    #inicio {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding-top: 72px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('assets/midias/midia_6.jpg') center/cover no-repeat;
+    }
+
+    /* dark overlay sobre a foto */
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 13, 28, 0.83);
+    }
+
+    /* reflexos azuis atmosféricos */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 45% at 75% 25%, rgba(27,98,192,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 55% at 15% 75%, rgba(43,120,216,.14) 0%, transparent 65%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(27,98,192,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27,98,192,.06) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 60px 24px;
+      max-width: 900px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(27,98,192,.2);
+      border: 1px solid rgba(27,98,192,.4);
+      color: #7CB8FF;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+
+    .hero-logo {
+      display: block;
+      height: 130px;
+      width: auto;
+      margin: 0 auto 32px;
+      filter: drop-shadow(0 0 40px rgba(27,98,192,.5));
+    }
+
+    .hero-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .hero-content h2 {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 400;
+      color: rgba(255,255,255,.7);
+      max-width: 640px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .hero-slogan {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--blue-light);
+      font-size: 1.1rem;
+      letter-spacing: .5px;
+      margin-bottom: 44px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      transition: all .25s;
+      box-shadow: 0 4px 20px rgba(27,98,192,.4);
+    }
+
+    .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(27,98,192,.5); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.25);
+      transition: all .25s;
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.5); transform: translateY(-2px); }
+
+    .btn-vitrine-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--blue-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 14px 28px;
+      border-radius: 10px;
+      border: 1px solid rgba(43,120,216,.5);
+      transition: all .25s;
+    }
+
+    .btn-vitrine-hero:hover {
+      background: rgba(27,98,192,.2);
+      border-color: var(--blue-light);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .stat-label {
+      font-size: .8rem;
+      color: rgba(255,255,255,.5);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 90px 24px; }
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 800;
+      color: var(--gray-900);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      max-width: 540px;
+      line-height: 1.7;
+    }
+
+    /* ─── SOBRE ─── */
+    #sobre { background: var(--white); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .sobre-visual {
+      position: relative;
+      /* overflow controlado por section { overflow-x: hidden } */
+    }
+
+    .sobre-img-main {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .sobre-img-accent {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid var(--white);
+      box-shadow: var(--shadow-md);
+    }
+
+    .sobre-badge {
+      position: absolute;
+      top: 24px;
+      left: -24px;
+      background: var(--blue);
+      color: var(--white);
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .sobre-badge strong {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .sobre-badge span {
+      font-size: .75rem;
+      opacity: .85;
+    }
+
+    .sobre-text .section-desc { margin-bottom: 32px; }
+
+    .sobre-historia {
+      font-size: .95rem;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .valores-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .valor-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .875rem;
+      color: var(--gray-600);
+    }
+
+    .valor-item i {
+      color: var(--blue);
+      margin-top: 2px;
+      flex-shrink: 0;
+      font-size: .9rem;
+    }
+
+    .mvv-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .mvv-tab {
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid var(--gray-200);
+      background: transparent;
+      color: var(--gray-600);
+      transition: all .2s;
+    }
+
+    .mvv-tab.active, .mvv-tab:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: var(--white);
+    }
+
+    .mvv-content { display: none; font-size: .9rem; color: var(--gray-600); line-height: 1.7; }
+    .mvv-content.active { display: block; }
+
+    /* ─── SERVIÇOS ─── */
+    #servicos { background: var(--gray-50); }
+
+    .servicos-header { text-align: center; margin-bottom: 56px; }
+    .servicos-header .section-desc { margin: 0 auto; }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .servico-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-100);
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .servico-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--blue);
+      transform: scaleX(0);
+      transition: transform .3s;
+    }
+
+    .servico-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .servico-card:hover::before { transform: scaleX(1); }
+
+    .servico-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--blue-pale);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+      color: var(--blue);
+      transition: all .3s;
+    }
+
+    .servico-card:hover .servico-icon { background: var(--blue); color: var(--white); }
+
+    .servico-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .servico-card p { font-size: .875rem; color: var(--gray-600); line-height: 1.7; margin-bottom: 20px; }
+
+    .servico-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .servico-items li {
+      font-size: .8rem;
+      color: var(--gray-600);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .servico-items li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ─── PRODUTOS ─── */
+    #produtos { background: var(--white); }
+
+    .produtos-header { text-align: center; margin-bottom: 56px; }
+
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .produto-card {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      height: 300px;
+    }
+
+    .produto-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .produto-card:hover img { transform: scale(1.06); }
+
+    .produto-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,20,40,.9) 0%, rgba(10,20,40,.3) 50%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+
+    .produto-overlay .produto-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--blue);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .produto-overlay h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .produto-overlay p { font-size: .8rem; color: rgba(255,255,255,.75); line-height: 1.5; }
+
+    /* ─── MERCADOS ─── */
+    #mercados {
+      background: var(--gray-900);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #mercados::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('assets/midias/midia_1.jpg') center/cover no-repeat;
+      opacity: 0.09;
+      z-index: 0;
+    }
+
+    #mercados .container { position: relative; z-index: 1; }
+
+    .mercados-header { text-align: center; margin-bottom: 56px; }
+    .mercados-header .section-label { color: var(--blue-light); }
+    .mercados-header .section-label::before { background: var(--blue-light); }
+    .mercados-header .section-title { color: var(--white); }
+    .mercados-header .section-desc { color: rgba(255,255,255,.6); margin: 0 auto; }
+
+    .mercados-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .mercado-item {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: all .3s;
+    }
+
+    .mercado-item:hover {
+      background: rgba(27,98,192,.15);
+      border-color: rgba(27,98,192,.4);
+      transform: translateY(-4px);
+    }
+
+    .mercado-item i {
+      font-size: 2rem;
+      color: var(--blue-light);
+      margin-bottom: 14px;
+    }
+
+    .mercado-item h3 {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    /* ─── GALERIA ─── */
+    #galeria { background: var(--white); }
+
+    .galeria-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .galeria-header-left .section-desc { max-width: 400px; }
+
+    .galeria-counter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-pale);
+      border: 1px solid var(--gray-200);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 228px;
+      gap: 14px;
+      grid-auto-flow: row dense;
+    }
+
+    .galeria-item {
+      overflow: hidden;
+      border-radius: 14px;
+      position: relative;
+      cursor: pointer;
+      background: var(--gray-100);
+    }
+
+    /* bento layout via nth-child */
+    .galeria-item:nth-child(1) { grid-row: span 2; }
+    .galeria-item:nth-child(4) { grid-row: span 2; }
+    .galeria-item:nth-child(5) { grid-column: span 2; }
+    .galeria-item:nth-child(7) { grid-row: span 2; }
+
+    .galeria-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s cubic-bezier(.25,.46,.45,.94);
+      display: block;
+    }
+
+    .galeria-item:hover img { transform: scale(1.07); }
+
+    .galeria-caption {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(10,20,40,.78) 0%,
+        rgba(10,20,40,.18) 45%,
+        transparent 75%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+
+    .galeria-item:hover .galeria-caption { opacity: 1; }
+
+    .galeria-caption-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      transform: translateY(8px);
+      transition: transform .35s ease;
+    }
+
+    .galeria-item:hover .galeria-caption-icon { transform: translateY(0); }
+
+    .galeria-caption-icon i { color: var(--white); font-size: .85rem; }
+
+    .galeria-caption-text {
+      color: var(--white);
+      font-size: .8rem;
+      font-weight: 600;
+      transform: translateY(8px);
+      transition: transform .35s ease .04s;
+    }
+
+    .galeria-item:hover .galeria-caption-text { transform: translateY(0); }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      background: rgba(5,10,20,.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .lightbox.active { opacity: 1; pointer-events: all; }
+
+    .lightbox-img {
+      max-width: 88vw;
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.6);
+      transition: opacity .25s;
+    }
+
+    .lb-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s;
+    }
+
+    .lb-close:hover { background: rgba(255,255,255,.2); }
+
+    .lb-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s;
+    }
+
+    .lb-nav:hover { background: var(--blue); border-color: var(--blue); }
+    .lb-prev { left: 20px; }
+    .lb-next { right: 20px; }
+
+    .lb-counter {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      color: rgba(255,255,255,.8);
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+    }
+
+    /* ─── DEPOIMENTOS ─── */
+    #depoimentos { background: var(--white); }
+
+    .dep-header { text-align: center; margin-bottom: 56px; }
+
+    .dep-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .dep-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-100);
+      border-radius: 16px;
+      padding: 36px 28px;
+      position: relative;
+      transition: all .3s;
+    }
+
+    .dep-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+
+    .dep-quote {
+      font-size: 3rem;
+      color: var(--blue);
+      font-family: Georgia, serif;
+      line-height: 1;
+      margin-bottom: 16px;
+      opacity: .4;
+    }
+
+    .dep-stars {
+      color: #F5A623;
+      font-size: .9rem;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .dep-text {
+      font-size: .925rem;
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .dep-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .dep-avatar {
+      width: 48px;
+      height: 48px;
+      background: var(--blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .dep-name {
+      font-weight: 700;
+      color: var(--gray-900);
+      font-size: .9rem;
+    }
+
+    .dep-role {
+      font-size: .78rem;
+      color: var(--gray-400);
+      margin-top: 2px;
+    }
+
+    /* ─── CONTATO ─── */
+    #contato {
+      background: var(--gray-900);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contato::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('assets/midias/midia_3.jpg') center/cover no-repeat;
+      opacity: 0.08;
+      z-index: 0;
+    }
+
+    #contato .container { position: relative; z-index: 1; }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contato-info .section-label { color: var(--blue-light); }
+    .contato-info .section-label::before { background: var(--blue-light); }
+    .contato-info .section-title { color: var(--white); }
+
+    .contato-desc {
+      color: rgba(255,255,255,.6);
+      font-size: .95rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .contato-items { display: flex; flex-direction: column; gap: 20px; }
+
+    .contato-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .contato-item-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(27,98,192,.25);
+      border: 1px solid rgba(27,98,192,.4);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue-light);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contato-item-text strong {
+      display: block;
+      color: rgba(255,255,255,.5);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .contato-item-text span {
+      color: var(--white);
+      font-size: .95rem;
+    }
+
+    .contato-item-text a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: .95rem;
+      transition: color .2s;
+    }
+
+    .contato-item-text a:hover { color: var(--blue-light); }
+
+    .contato-form-wrap {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      padding: 40px;
+    }
+
+    .contato-form-wrap h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-group label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .5px;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: .9rem;
+      transition: border-color .2s;
+      outline: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,.25); }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--blue-light); }
+
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .form-submit:hover { background: var(--blue-light); transform: translateY(-2px); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--gray-900);
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 60px 24px 0;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+
+    .footer-brand img {
+      height: 56px;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: .875rem;
+      color: rgba(255,255,255,.5);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .footer-slogan {
+      font-size: .8rem;
+      color: var(--blue-light);
+      font-style: italic;
+    }
+
+    .footer-col h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: .875rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: .5px;
+    }
+
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .footer-links a {
+      color: rgba(255,255,255,.5);
+      text-decoration: none;
+      font-size: .875rem;
+      transition: color .2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links a:hover { color: var(--blue-light); }
+    .footer-links a i { font-size: .75rem; }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .footer-contact-item i {
+      color: var(--blue-light);
+      margin-top: 3px;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item span,
+    .footer-contact-item a {
+      color: rgba(255,255,255,.5);
+      font-size: .82rem;
+      text-decoration: none;
+      line-height: 1.5;
+      transition: color .2s;
+    }
+
+    .footer-contact-item a:hover { color: var(--blue-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p {
+      font-size: .8rem;
+      color: rgba(255,255,255,.3);
+    }
+
+    .footer-bottom .cnpj {
+      font-size: .75rem;
+      color: rgba(255,255,255,.2);
+    }
+
+    /* ─── WHATSAPP ─── */
+    .wa-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,.35);
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .wa-btn:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(37,211,102,.5); }
+
+    .wa-btn i { color: var(--white); font-size: 1.6rem; }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVIDADE COMPLETA
+       ═══════════════════════════════════════ */
+
+    /* ─── HD / FULL HD / WIDESCREEN (≥1440px) ─── */
+    @media (min-width: 1440px) {
+      .container, .header-inner, .footer-inner { max-width: 1360px; }
+      section { padding: 110px 32px; }
+      .galeria-grid { grid-auto-rows: 260px; gap: 16px; }
+      .hero-stats { gap: 64px; }
+      .dep-grid { gap: 32px; }
+    }
+
+    @media (min-width: 1920px) {
+      .container, .header-inner, .footer-inner { max-width: 1640px; }
+      section { padding: 130px 48px; }
+      .galeria-grid { grid-auto-rows: 300px; gap: 18px; }
+      .sobre-img-main { height: 580px; }
+      .hero-logo { height: 160px; margin-bottom: 36px; }
+      .footer-grid { grid-template-columns: 2.5fr 1fr 1fr 1.2fr; gap: 64px; }
+    }
+
+    @media (min-width: 2560px) {
+      .container, .header-inner, .footer-inner { max-width: 2100px; }
+      section { padding: 160px 64px; }
+      .galeria-grid { grid-auto-rows: 360px; gap: 20px; }
+    }
+
+    /* ─── LAPTOP MÉDIO (≤1280px) ─── */
+    @media (max-width: 1280px) {
+      nav a { padding: 8px 10px; font-size: .83rem; }
+      .servicos-grid { gap: 20px; }
+      .galeria-grid { grid-auto-rows: 210px; }
+    }
+
+    /* ─── LAPTOP PEQUENO / TABLET LANDSCAPE GRANDE (≤1024px) ─── */
+    @media (max-width: 1024px) {
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .produtos-grid { grid-template-columns: repeat(2, 1fr); }
+      .mercados-grid { grid-template-columns: repeat(4, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .galeria-grid { grid-auto-rows: 200px; }
+      .sobre-img-main { height: 420px; }
+      .sobre-img-accent { width: 160px; height: 160px; right: -14px; bottom: -14px; }
+      .sobre-badge { left: -14px; }
+    }
+
+    /* ─── TABLET LANDSCAPE / IPAD PRO (≤900px) ─── */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .menu-toggle { display: block; }
+      nav.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 72px; left: 0; right: 0;
+        background: rgba(10,20,40,.98);
+        padding: 12px 16px 20px;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        gap: 2px;
+        box-shadow: 0 8px 32px rgba(0,0,0,.4);
+      }
+      nav.open a { padding: 12px 16px; border-radius: 10px; font-size: .9rem; }
+      .header-inner { position: relative; }
+
+      .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-visual { order: -1; }
+      .sobre-img-main { height: 340px; }
+      .sobre-badge { left: 16px; top: 16px; }
+      .sobre-img-accent { display: none; }
+
+      .contato-grid { grid-template-columns: 1fr; gap: 48px; }
+      .dep-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .mercados-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+      .galeria-grid { grid-auto-rows: 185px; }
+      .galeria-item:nth-child(4) { grid-row: span 1; }
+      .galeria-item:nth-child(5) { grid-column: span 2; }
+      .galeria-item:nth-child(7) { grid-row: span 1; }
+    }
+
+    /* ─── TABLET PORTRAIT / IPAD (≤768px) ─── */
+    @media (max-width: 768px) {
+      section { padding: 80px 20px; }
+
+      /* Animações laterais viram fade+up para não vazar do viewport */
+      .sr-left, .sr-right { transform: translateY(28px); }
+      .sr-left.on, .sr-right.on { transform: none; }
+
+      /* Badge negativo fica dentro do container */
+      .sobre-visual { overflow: hidden; border-radius: 16px; }
+
+      /* Seção vitrine empilha no mobile */
+      #vitrine-section > .container > div:first-child { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .btn-vitrine-hero { width: 100%; max-width: 320px; justify-content: center; }
+
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .produtos-grid { grid-template-columns: 1fr; }
+      .mercados-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .dep-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .valores-grid { grid-template-columns: 1fr 1fr; }
+
+      .galeria-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+      .galeria-item:nth-child(1) { grid-row: span 2; }
+      .galeria-item:nth-child(4) { grid-row: span 1; }
+      .galeria-item:nth-child(5) { grid-column: span 1; }
+
+      .hero-stats { gap: 28px; flex-wrap: wrap; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-outline, .btn-vitrine-hero { width: 100%; max-width: 320px; justify-content: center; }
+
+      /* Vitrine section — 1 coluna em tablet */
+      #vitrine-section .vitrine-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+
+      .sobre-img-main { height: 280px; }
+      .form-row { grid-template-columns: 1fr 1fr; }
+      .produto-card { height: 260px; }
+    }
+
+    /* ─── MOBILE GRANDE / LANDSCAPE (≤640px) ─── */
+    @media (max-width: 640px) {
+      section { padding: 70px 18px; overflow-x: hidden; }
+
+      .header-inner { padding: 0 18px; }
+      .logo-text span:last-child { display: none; }
+
+      .btn-primary, .btn-outline, .btn-vitrine-hero { width: 100%; max-width: 100%; box-sizing: border-box; }
+      .vitrine-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+
+      .hero-content { padding: 48px 16px; }
+      .hero-stats { gap: 20px; padding-top: 28px; margin-top: 40px; }
+      .stat-num { font-size: 1.7rem; }
+      .hero-badge { font-size: .72rem; padding: 5px 14px; }
+      .hero-logo { height: 100px; margin-bottom: 24px; }
+
+      .servicos-grid { grid-template-columns: 1fr; gap: 14px; }
+      .servico-card { padding: 28px 22px; }
+
+      .mercados-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .mercado-item { padding: 22px 14px; }
+
+      .galeria-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; gap: 10px; }
+      .galeria-item:nth-child(1) { grid-row: span 2; }
+      .galeria-item:nth-child(7) { grid-row: span 1; }
+
+      .dep-card { padding: 28px 22px; }
+      .dep-grid { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-brand img { height: 44px; }
+      .contato-form-wrap { padding: 28px 20px; }
+
+      .sobre-grid { gap: 32px; }
+      .galeria-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .mvv-tabs { flex-wrap: wrap; gap: 6px; }
+    }
+
+    /* ─── MOBILE PADRÃO (≤480px) ─── */
+    @media (max-width: 480px) {
+      section { padding: 60px 16px; overflow-x: hidden; }
+
+      .vitrine-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+
+      .logo-wrap img { height: 38px; }
+      .logo-text span:first-child { font-size: .875rem; }
+
+      .hero-logo { height: 88px; margin-bottom: 20px; }
+      .hero-badge { display: none; }
+      .hero-buttons { gap: 12px; }
+      .btn-primary, .btn-outline { padding: 13px 22px; font-size: .9rem; }
+      .hero-stats { flex-wrap: wrap; justify-content: center; gap: 24px 32px; }
+      .stat { min-width: 80px; }
+
+      .section-title { font-size: clamp(1.5rem, 5.5vw, 2rem); }
+
+      .servico-card { padding: 24px 18px; }
+      .servico-icon { width: 52px; height: 52px; font-size: 1.3rem; }
+
+      .mercados-grid { grid-template-columns: repeat(2, 1fr); }
+      .mercado-item { padding: 20px 12px; }
+      .mercado-item i { font-size: 1.6rem; }
+
+      .galeria-grid { grid-auto-rows: 140px; gap: 8px; }
+      .galeria-item { border-radius: 10px; }
+
+      .dep-card { padding: 24px 18px; }
+      .dep-quote { font-size: 2.2rem; }
+
+      .contato-form-wrap { padding: 24px 16px; }
+      .contato-item-icon { width: 38px; height: 38px; flex-shrink: 0; }
+
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand img { height: 40px; }
+
+      .wa-btn { width: 52px; height: 52px; bottom: 20px; right: 20px; }
+      .wa-btn i { font-size: 1.4rem; }
+      .sobre-badge { padding: 12px 18px; }
+      .sobre-badge strong { font-size: 1.6rem; }
+      .produto-card { height: 240px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ─── MOBILE PEQUENO — iPhone SE, Galaxy A (≤390px) ─── */
+    @media (max-width: 390px) {
+      section { padding: 52px 14px; }
+      .header-inner { padding: 0 14px; height: 64px; }
+      nav.open { top: 64px; }
+
+      .hero-logo { height: 76px; }
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content h2 { font-size: .9rem; }
+      .hero-slogan { font-size: .95rem; }
+      .hero-stats { gap: 14px 24px; padding-top: 22px; margin-top: 30px; }
+      .stat-num { font-size: 1.5rem; }
+      .stat-label { font-size: .7rem; }
+
+      .section-title { font-size: 1.5rem; }
+      .section-desc { font-size: .9rem; }
+
+      .servico-card { padding: 20px 16px; }
+      .servico-card h3 { font-size: 1rem; }
+
+      .mercados-grid { gap: 8px; }
+      .mercado-item { padding: 18px 10px; }
+      .mercado-item h3 { font-size: .8rem; }
+      .mercado-item i { font-size: 1.4rem; }
+
+      .galeria-grid { grid-auto-rows: 120px; }
+
+      .dep-card { padding: 20px 16px; }
+      .dep-text { font-size: .87rem; }
+
+      .btn-primary, .btn-outline { font-size: .85rem; padding: 12px 18px; }
+
+      .contato-form-wrap { padding: 20px 14px; border-radius: 14px; }
+      .form-group input, .form-group textarea, .form-group select { padding: 10px 13px; font-size: .88rem; }
+
+      .footer-grid { gap: 24px; }
+      .footer-brand img { height: 36px; }
+    }
+
+    /* ─── MOBILE MUITO PEQUENO — Galaxy A14, iPhone SE 1ª gen (≤320px) ─── */
+    @media (max-width: 320px) {
+      section { padding: 44px 12px; }
+      .header-inner { padding: 0 12px; }
+      .logo-wrap img { height: 32px; }
+      .logo-text span:first-child { font-size: .8rem; }
+
+      .hero-logo { height: 64px; }
+      .hero-content h1 { font-size: 1.7rem; }
+      .hero-buttons { gap: 10px; }
+      .btn-primary, .btn-outline { font-size: .82rem; padding: 11px 16px; }
+      .hero-stats { gap: 12px 18px; }
+
+      .galeria-grid { grid-auto-rows: 110px; gap: 6px; }
+      .servico-card, .dep-card { padding: 18px 14px; }
+      .contato-form-wrap { padding: 18px 12px; }
+      .mercado-item { padding: 14px 8px; }
+      .mercado-item h3 { font-size: .75rem; }
+
+      .wa-btn { width: 46px; height: 46px; bottom: 16px; right: 16px; }
+      .wa-btn i { font-size: 1.25rem; }
+    }
+
+    /* ─── BARRA DE PROGRESSO ─── */
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--blue-dark), var(--blue), var(--blue-light));
+      z-index: 10000;
+      box-shadow: 0 0 12px rgba(43,120,216,.65);
+      pointer-events: none;
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .sr {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+    }
+    .sr-left  { opacity: 0; transform: translateX(-32px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+    .sr-right { opacity: 0; transform: translateX(32px);  transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+    .sr-scale { opacity: 0; transform: scale(.96) translateY(16px); transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
+
+    .sr.on, .sr-left.on, .sr-right.on, .sr-scale.on {
+      opacity: 1;
+      transform: none;
+    }
+
+    .d1 { transition-delay: .08s; }
+    .d2 { transition-delay: .16s; }
+    .d3 { transition-delay: .24s; }
+    .d4 { transition-delay: .32s; }
+    .d5 { transition-delay: .40s; }
+    .d6 { transition-delay: .48s; }
+    .d7 { transition-delay: .56s; }
+    .d8 { transition-delay: .64s; }
+
+    /* ─── NAV ACTIVA + SUBLINHADO ─── */
+    nav a:not(.nav-cta) { position: relative; }
+
+    nav a:not(.nav-cta)::after {
+      content: '';
+      position: absolute;
+      bottom: 5px; left: 50%;
+      width: 0; height: 2px;
+      background: var(--blue-light);
+      border-radius: 2px;
+      transform: translateX(-50%);
+      transition: width .25s ease;
+    }
+
+    nav a:not(.nav-cta):hover::after,
+    nav a:not(.nav-cta).nav-on::after { width: 50%; }
+
+    nav a.nav-on {
+      color: var(--white) !important;
+      background: rgba(27,98,192,.18) !important;
+    }
+
+    /* ─── MELHORIAS DE HOVER ─── */
+    .servico-card:hover {
+      box-shadow: 0 16px 48px rgba(27,98,192,.18), 0 0 0 1px rgba(27,98,192,.1) !important;
+    }
+
+    .dep-card:hover {
+      box-shadow: 0 10px 36px rgba(27,98,192,.13) !important;
+      border-color: rgba(27,98,192,.15) !important;
+    }
+
+    .mercado-item:hover {
+      transform: translateY(-6px) !important;
+    }
+
+    /* ─── DIVISOR ENTRE SEÇÕES ─── */
+    .section-sep {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gray-200) 30%, var(--gray-200) 70%, transparent);
+      border: none;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#inicio" class="logo-wrap">
+        <img src="assets/logo.png" alt="Logo MS Serviços - Magno Santos">
+        <div class="logo-text">
+          <span>MS Serviços</span>
+          <span>Magno Santos</span>
+        </div>
+      </a>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="main-nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="vitrine.html" class="nav-vitrine"><i class="fas fa-store"></i> Vitrine</a>
+        <a href="#contato" class="nav-cta">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-shield-halved"></i>
+        Desde 2018 — Excelência em cada projeto
+      </div>
+      <img src="assets/logo.png" alt="Logo MS Serviços" class="hero-logo">
+      <h1>Magno Santos</h1>
+      <h2>Soluções completas em elétrica, automação, segurança eletrônica e redes lógicas para residências, empresas e indústrias.</h2>
+      <p class="hero-slogan">"Proteção, tecnologia e eficiência."</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5581994991014" class="btn-primary">
+          <i class="fab fa-whatsapp"></i>
+          Solicitar orçamento
+        </a>
+        <a href="#servicos" class="btn-outline">
+          <i class="fas fa-bolt"></i>
+          Nossos serviços
+        </a>
+        <a href="vitrine.html" class="btn-vitrine-hero">
+          <i class="fas fa-store"></i>
+          Acessar vitrine
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num" data-target="7" data-suffix="+">0+</div>
+          <div class="stat-label">Anos de experiência</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="4" data-suffix="">0</div>
+          <div class="stat-label">Áreas de atuação</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-target="100" data-suffix="%">0%</div>
+          <div class="stat-label">Comprometimento</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual">
+          <div class="sobre-badge">
+            <strong>2018</strong>
+            <span>Fundação</span>
+          </div>
+          <img src="assets/midias/midia_1.jpg" alt="Equipe Magno Santos em campo" class="sobre-img-main">
+          <img src="assets/midias/midia_3.jpg" alt="Serviços elétricos MS Serviços" class="sobre-img-accent">
+        </div>
+        <div class="sobre-text">
+          <div class="section-label">Sobre nós</div>
+          <h2 class="section-title">Nossa história é construída com compromisso e dedicação</h2>
+          <p class="sobre-historia">
+            A empresa nasceu de um desejo pessoal de colocar em prática experiências e conhecimentos adquiridos ao longo dos anos, levando soluções de qualidade para novos lugares e enfrentando novos desafios.
+          </p>
+          <p class="sobre-historia">
+            Em 2018, iniciou-se essa jornada, com dedicação, responsabilidade e compromisso em oferecer serviços especializados nas áreas de elétrica, automação e segurança eletrônica. Ao longo dessa caminhada, crescemos, conquistamos parcerias importantes e nos desenvolvemos continuamente.
+          </p>
+
+          <div class="mvv-tabs">
+            <button class="mvv-tab active" onclick="showTab('missao')">Missão</button>
+            <button class="mvv-tab" onclick="showTab('visao')">Visão</button>
+            <button class="mvv-tab" onclick="showTab('valores')">Valores</button>
+          </div>
+          <div id="tab-missao" class="mvv-content active">
+            Oferecer serviços e soluções completas em instalações elétricas, automação, segurança eletrônica, monitoramento e redes lógicas, com qualidade, responsabilidade e compromisso, garantindo eficiência, proteção e tranquilidade para residências, empresas e indústrias.
+          </div>
+          <div id="tab-visao" class="mvv-content">
+            Ser referência em soluções elétricas, automação e segurança eletrônica, oferecendo tecnologia, confiança e excelência no atendimento, com foco em inovação, segurança e satisfação dos clientes.
+          </div>
+          <div id="tab-valores" class="mvv-content">
+            <div class="valores-grid" style="margin-top:12px;">
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Excelência no atendimento</div>
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Segurança e qualidade</div>
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Honestidade e transparência</div>
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Responsabilidade técnica</div>
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Inovação tecnológica</div>
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Pontualidade e respeito</div>
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Soluções personalizadas</div>
+              <div class="valor-item"><i class="fas fa-check-circle"></i> Ética e confiança</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 36px;">
+            <a href="#contato" class="btn-primary" style="display:inline-flex; text-decoration:none;">
+              <i class="fas fa-envelope"></i>
+              Fale conosco
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="container">
+      <div class="servicos-header">
+        <div class="section-label">O que fazemos</div>
+        <h2 class="section-title">Nossos serviços</h2>
+        <p class="section-desc">Soluções completas e personalizadas para cada necessidade, com excelência técnica e compromisso com a sua segurança.</p>
+      </div>
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <div class="servico-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Elétrica em geral</h3>
+          <p>Instalações elétricas residenciais, comerciais e industriais com segurança e qualidade técnica.</p>
+          <ul class="servico-items">
+            <li>Instalações novas e reformas</li>
+            <li>Quadros de distribuição</li>
+            <li>Cabeamento estruturado</li>
+            <li>Manutenção elétrica</li>
+            <li>SPDA e aterramento</li>
+          </ul>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Redes em geral</h3>
+          <p>Infraestrutura de redes lógicas para empresas, residências e grandes empreendimentos.</p>
+          <ul class="servico-items">
+            <li>Cabeamento Cat5e/Cat6</li>
+            <li>Configuração de switches</li>
+            <li>Redes Wi-Fi corporativas</li>
+            <li>Redes estruturadas</li>
+            <li>Manutenção e suporte</li>
+          </ul>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon"><i class="fas fa-video"></i></div>
+          <h3>CFTV e monitoramento</h3>
+          <p>Sistemas de câmeras e monitoramento para proteção e segurança do seu patrimônio.</p>
+          <ul class="servico-items">
+            <li>Câmeras analógicas e IP</li>
+            <li>DVR e NVR</li>
+            <li>Monitoramento remoto</li>
+            <li>Câmeras dome e bullet</li>
+            <li>Sistemas externos</li>
+          </ul>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon"><i class="fas fa-lock"></i></div>
+          <h3>Controle de acesso</h3>
+          <p>Soluções de controle de acesso para ambientes corporativos, residenciais e industriais.</p>
+          <ul class="servico-items">
+            <li>Catracas e torniquetes</li>
+            <li>Biometria e RFID</li>
+            <li>Interfones e porteiros</li>
+            <li>Fechaduras eletrônicas</li>
+            <li>Automação de portões</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section id="produtos">
+    <div class="container">
+      <div class="produtos-header">
+        <div class="section-label">Produtos</div>
+        <h2 class="section-title">Equipamentos e materiais</h2>
+        <p class="section-desc" style="margin: 0 auto;">Trabalhamos com os melhores equipamentos do mercado para garantir durabilidade e desempenho.</p>
+      </div>
+      <div class="produtos-grid">
+        <div class="produto-card">
+          <img src="assets/midias/midia_5.jpg" alt="Equipamentos de segurança eletrônica - câmeras, DVR e controle de acesso">
+          <div class="produto-overlay">
+            <div class="produto-icon"><i class="fas fa-shield-halved"></i></div>
+            <h3>Segurança e controle de acesso</h3>
+            <p>Câmeras, DVRs, NVRs, equipamentos de controle de acesso e monitoramento</p>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="assets/midias/midia_8.jpg" alt="Materiais de rede - cabos, switches e conectores">
+          <div class="produto-overlay">
+            <div class="produto-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Infraestrutura de redes</h3>
+            <p>Cabos de rede, switches, plugs, patch panels e conectores para redes lógicas</p>
+          </div>
+        </div>
+        <div class="produto-card">
+          <img src="assets/midias/midia_11.jpg" alt="Materiais elétricos - cabos, tomadas e disjuntores">
+          <div class="produto-overlay">
+            <div class="produto-icon"><i class="fas fa-plug"></i></div>
+            <h3>Materiais elétricos</h3>
+            <p>Cabos elétricos, tomadas, disjuntores, DRs, DPS e componentes elétricos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERCADOS -->
+  <section id="mercados">
+    <div class="container">
+      <div class="mercados-header">
+        <div class="section-label">Segmentos</div>
+        <h2 class="section-title">Mercados que atendemos</h2>
+        <p class="section-desc">Desenvolvemos soluções personalizadas de acordo com a necessidade de cada cliente e ambiente.</p>
+      </div>
+      <div class="mercados-grid">
+        <div class="mercado-item">
+          <i class="fas fa-building"></i>
+          <h3>Empresas</h3>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-store"></i>
+          <h3>Comércios</h3>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>Colégios e instituições</h3>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-building-columns"></i>
+          <h3>Edifícios</h3>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-house"></i>
+          <h3>Residências</h3>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-industry"></i>
+          <h3>Indústrias</h3>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-city"></i>
+          <h3>Condomínios</h3>
+        </div>
+        <div class="mercado-item">
+          <i class="fas fa-ellipsis"></i>
+          <h3>E muito mais</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="container">
+      <div class="galeria-header">
+        <div class="galeria-header-left">
+          <div class="section-label">Nossos trabalhos</div>
+          <h2 class="section-title">Galeria de projetos</h2>
+          <p class="section-desc">Conheça alguns dos projetos que realizamos com qualidade e dedicação.</p>
+        </div>
+        <div class="galeria-counter">
+          <i class="fas fa-images"></i>
+          21 projetos realizados
+        </div>
+      </div>
+      <div class="galeria-grid" id="galeria-grid">
+        <div class="galeria-item" data-index="0">
+          <img src="assets/midias/midia_2.jpg" alt="Projeto elétrico MS Serviços" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="1">
+          <img src="assets/midias/midia_4.jpg" alt="Instalação de câmeras de segurança" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="2">
+          <img src="assets/midias/midia_6.jpg" alt="Instalação de rede lógica" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="3">
+          <img src="assets/midias/midia_7.jpg" alt="Segurança eletrônica comercial" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="4">
+          <img src="assets/midias/midia_9.jpg" alt="Instalação elétrica industrial" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="5">
+          <img src="assets/midias/midia_10.jpg" alt="Controle de acesso instalado" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="6">
+          <img src="assets/midias/midia_12.jpg" alt="Infraestrutura de redes" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="7">
+          <img src="assets/midias/midia_13.jpg" alt="Serviços elétricos em edifício" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="8">
+          <img src="assets/midias/midia_14.jpg" alt="Instalação CFTV" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="9">
+          <img src="assets/midias/midia_15.jpg" alt="Projeto de automação" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="10">
+          <img src="assets/midias/midia_17.jpg" alt="Trabalhos elétricos e de segurança" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+        <div class="galeria-item" data-index="11">
+          <img src="assets/midias/midia_18.jpg" alt="Instalação profissional MS Serviços" loading="lazy">
+          <div class="galeria-caption">
+            <div class="galeria-caption-icon"><i class="fas fa-expand-alt"></i></div>
+            <span class="galeria-caption-text">Ver projeto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar foto">
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Fechar"><i class="fas fa-times"></i></button>
+    <button class="lb-nav lb-prev" onclick="lbNav(-1)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Projeto MS Serviços">
+    <button class="lb-nav lb-next" onclick="lbNav(1)" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-counter" id="lb-counter">1 / 12</div>
+  </div>
+
+  <!-- VITRINE -->
+  <section id="vitrine-section" style="background: linear-gradient(135deg, #0A1428 0%, #0D1F3C 60%, #0A1428 100%); position: relative; overflow: hidden; padding: 100px 24px;">
+    <div style="position:absolute;inset:0;background:url('assets/midias/midia_9.jpg') center/cover no-repeat;opacity:.07;"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(27,98,192,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(27,98,192,.05) 1px,transparent 1px);background-size:60px 60px;"></div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="vitrine-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;">
+
+        <!-- Texto -->
+        <div>
+          <div class="section-label" style="color:#7CB8FF;">
+            <span style="display:block;width:28px;height:2px;background:#7CB8FF;border-radius:2px;margin-right:10px;display:inline-block;vertical-align:middle;margin-bottom:2px;"></span>
+            Compre online
+          </div>
+          <h2 class="section-title" style="color:#fff;margin-top:12px;">Nossa vitrine de<br>produtos e serviços</h2>
+          <p style="color:rgba(255,255,255,.62);font-size:1.05rem;line-height:1.8;margin:20px 0 36px;">Acesse nossa vitrine online e confira todos os equipamentos, materiais e soluções disponíveis — câmeras, DVRs, cabos, disjuntores, switches e muito mais. Tudo com praticidade, direto do seu dispositivo.</p>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:40px;">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:40px;height:40px;background:rgba(27,98,192,.25);border:1px solid rgba(27,98,192,.4);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-shield-halved" style="color:#7CB8FF;font-size:.9rem;"></i>
+              </div>
+              <span style="color:rgba(255,255,255,.75);font-size:.95rem;">Equipamentos de segurança e CFTV</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:40px;height:40px;background:rgba(27,98,192,.25);border:1px solid rgba(27,98,192,.4);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-network-wired" style="color:#7CB8FF;font-size:.9rem;"></i>
+              </div>
+              <span style="color:rgba(255,255,255,.75);font-size:.95rem;">Materiais de rede e infraestrutura</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:40px;height:40px;background:rgba(27,98,192,.25);border:1px solid rgba(27,98,192,.4);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-bolt" style="color:#7CB8FF;font-size:.9rem;"></i>
+              </div>
+              <span style="color:rgba(255,255,255,.75);font-size:.95rem;">Componentes e materiais elétricos</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div style="width:40px;height:40px;background:rgba(27,98,192,.25);border:1px solid rgba(27,98,192,.4);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-lock" style="color:#7CB8FF;font-size:.9rem;"></i>
+              </div>
+              <span style="color:rgba(255,255,255,.75);font-size:.95rem;">Controle de acesso e automação</span>
+            </div>
+          </div>
+
+          <a href="vitrine.html" style="display:inline-flex;align-items:center;gap:12px;background:#1B62C0;color:#fff;text-decoration:none;font-weight:700;font-size:1rem;padding:16px 32px;border-radius:12px;box-shadow:0 6px 24px rgba(27,98,192,.45);transition:all .25s;" onmouseover="this.style.background='#2B78D8';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#1B62C0';this.style.transform='translateY(0)'">
+            <i class="fas fa-store"></i>
+            Acessar vitrine online
+            <i class="fas fa-arrow-right" style="font-size:.85rem;opacity:.8;"></i>
+          </a>
+        </div>
+
+        <!-- Preview da vitrine -->
+        <div style="position:relative;">
+          <!-- Moldura de browser/dispositivo -->
+          <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.5);">
+            <!-- Barra do browser -->
+            <div style="background:rgba(255,255,255,.08);padding:12px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.08);">
+              <div style="display:flex;gap:6px;">
+                <div style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);"></div>
+                <div style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);"></div>
+                <div style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);"></div>
+              </div>
+              <div style="flex:1;background:rgba(255,255,255,.08);border-radius:6px;padding:5px 12px;font-size:.72rem;color:rgba(255,255,255,.4);font-family:monospace;">magnosantoscosta.egestor.com.br/vitrine</div>
+            </div>
+            <!-- Conteúdo simulado -->
+            <div style="padding:24px 20px;display:flex;flex-direction:column;gap:14px;min-height:280px;">
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+                <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:14px;text-align:center;">
+                  <div style="width:40px;height:40px;background:rgba(27,98,192,.3);border-radius:8px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-video" style="color:#7CB8FF;font-size:.9rem;"></i></div>
+                  <div style="height:6px;background:rgba(255,255,255,.15);border-radius:3px;margin-bottom:4px;"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.08);border-radius:3px;width:70%;margin:0 auto;"></div>
+                </div>
+                <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:14px;text-align:center;">
+                  <div style="width:40px;height:40px;background:rgba(27,98,192,.3);border-radius:8px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-network-wired" style="color:#7CB8FF;font-size:.9rem;"></i></div>
+                  <div style="height:6px;background:rgba(255,255,255,.15);border-radius:3px;margin-bottom:4px;"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.08);border-radius:3px;width:70%;margin:0 auto;"></div>
+                </div>
+                <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:14px;text-align:center;">
+                  <div style="width:40px;height:40px;background:rgba(27,98,192,.3);border-radius:8px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-bolt" style="color:#7CB8FF;font-size:.9rem;"></i></div>
+                  <div style="height:6px;background:rgba(255,255,255,.15);border-radius:3px;margin-bottom:4px;"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.08);border-radius:3px;width:70%;margin:0 auto;"></div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:14px;">
+                  <div style="height:8px;background:rgba(255,255,255,.15);border-radius:3px;margin-bottom:6px;width:80%;"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.08);border-radius:3px;"></div>
+                </div>
+                <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:14px;">
+                  <div style="height:8px;background:rgba(255,255,255,.15);border-radius:3px;margin-bottom:6px;width:80%;"></div>
+                  <div style="height:6px;background:rgba(255,255,255,.08);border-radius:3px;"></div>
+                </div>
+              </div>
+              <div style="text-align:center;padding:12px 0;">
+                <div style="display:inline-flex;align-items:center;gap:8px;background:#1B62C0;color:#fff;font-size:.8rem;font-weight:600;padding:8px 20px;border-radius:8px;">
+                  <i class="fas fa-store"></i> Ver todos os produtos
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Glow decorativo -->
+          <div style="position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:60%;height:40px;background:rgba(27,98,192,.35);filter:blur(28px);border-radius:50%;"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos">
+    <div class="container">
+      <div class="dep-header">
+        <div class="section-label">Depoimentos</div>
+        <h2 class="section-title">O que nossos clientes dizem</h2>
+        <p class="section-desc" style="margin: 0 auto;">A satisfação dos nossos clientes é o maior reconhecimento do nosso trabalho.</p>
+      </div>
+      <div class="dep-grid">
+        <div class="dep-card">
+          <div class="dep-quote">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Serviço de altíssima qualidade. A equipe da Magno Santos realizou toda a instalação elétrica e de câmeras da nossa empresa com extrema competência. Profissionais sérios, pontuais e que entregam o que prometem.</p>
+          <div class="dep-author">
+            <div class="dep-avatar">EN</div>
+            <div>
+              <div class="dep-name">Esperança Nordeste Ltda</div>
+              <div class="dep-role">Cliente — Segurança e elétrica</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card">
+          <div class="dep-quote">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Contratamos os serviços da MS Serviços para instalar o sistema de câmeras e rede do nosso estabelecimento. O resultado superou nossas expectativas. Recomendamos sem hesitar para qualquer empresa.</p>
+          <div class="dep-author">
+            <div class="dep-avatar">RM</div>
+            <div>
+              <div class="dep-name">Renascer Mercantil</div>
+              <div class="dep-role">Cliente — CFTV e redes</div>
+            </div>
+          </div>
+        </div>
+        <div class="dep-card">
+          <div class="dep-quote">"</div>
+          <div class="dep-stars">★★★★★</div>
+          <p class="dep-text">Excelente experiência com a equipe do Magno Santos. Instalaram o controle de acesso e a rede da nossa escola com total profissionalismo. Atendimento personalizado e soluções sob medida para nossas necessidades.</p>
+          <div class="dep-author">
+            <div class="dep-avatar">MA</div>
+            <div>
+              <div class="dep-name">Mackenzie Agnes</div>
+              <div class="dep-role">Cliente — Redes e controle de acesso</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-info">
+          <div class="section-label">Fale conosco</div>
+          <h2 class="section-title">Entre em contato</h2>
+          <p class="contato-desc">Estamos prontos para atender você e desenvolver a melhor solução para o seu projeto. Entre em contato e solicite seu orçamento.</p>
+          <div class="contato-items">
+            <div class="contato-item">
+              <div class="contato-item-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contato-item-text">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/5581994991014">(81) 99499-1014</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-item-icon"><i class="fas fa-phone"></i></div>
+              <div class="contato-item-text">
+                <strong>Telefone</strong>
+                <a href="tel:+5581994991014">(81) 99499-1014</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-item-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contato-item-text">
+                <strong>E-mail</strong>
+                <a href="mailto:magnoelet@gmail.com">magnoelet@gmail.com</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-item-icon"><i class="fas fa-location-dot"></i></div>
+              <div class="contato-item-text">
+                <strong>Endereço</strong>
+                <span>Rua João Batista de Oliveira Figuei, 03</span>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-item-icon"><i class="fas fa-clock"></i></div>
+              <div class="contato-item-text">
+                <strong>Horário de atendimento</strong>
+                <span>Seg–Sex: 7h às 18h &nbsp;|&nbsp; Sáb: 8h às 12h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contato-form-wrap">
+          <h3>Solicite seu orçamento</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Seu nome</label>
+              <input type="text" placeholder="Nome completo">
+            </div>
+            <div class="form-group">
+              <label>Telefone / WhatsApp</label>
+              <input type="tel" placeholder="(00) 00000-0000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" placeholder="seu@email.com">
+          </div>
+          <div class="form-group">
+            <label>Serviço de interesse</label>
+            <select>
+              <option value="" disabled selected>Selecione um serviço</option>
+              <option>Elétrica em geral</option>
+              <option>Redes em geral</option>
+              <option>CFTV e monitoramento</option>
+              <option>Controle de acesso</option>
+              <option>Múltiplos serviços</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mensagem</label>
+            <textarea placeholder="Descreva seu projeto ou necessidade..."></textarea>
+          </div>
+          <a href="https://wa.me/5581994991014?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20orçamento." class="form-submit">
+            <i class="fab fa-whatsapp"></i>
+            Enviar via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Logo MS Serviços - Magno Santos">
+          <p>Soluções completas em instalações elétricas, automação, segurança eletrônica e redes lógicas. Qualidade, responsabilidade e compromisso em cada projeto.</p>
+          <p class="footer-slogan">"Proteção, tecnologia e eficiência."</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Início</a></li>
+            <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre nós</a></li>
+            <li><a href="#servicos"><i class="fas fa-chevron-right"></i> Serviços</a></li>
+            <li><a href="#galeria"><i class="fas fa-chevron-right"></i> Galeria</a></li>
+            <li><a href="#depoimentos"><i class="fas fa-chevron-right"></i> Depoimentos</a></li>
+            <li><a href="#contato"><i class="fas fa-chevron-right"></i> Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul class="footer-links">
+            <li><a href="#servicos"><i class="fas fa-bolt"></i> Elétrica em geral</a></li>
+            <li><a href="#servicos"><i class="fas fa-network-wired"></i> Redes em geral</a></li>
+            <li><a href="#servicos"><i class="fas fa-video"></i> CFTV e monitoramento</a></li>
+            <li><a href="#servicos"><i class="fas fa-lock"></i> Controle de acesso</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <div class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/5581994991014">(81) 99499-1014</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:magnoelet@gmail.com">magnoelet@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-location-dot"></i>
+            <span>Rua João Batista de Oliveira Figuei, 03</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Seg–Sex: 7h–18h &nbsp;|&nbsp; Sáb: 8h–12h</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Magno Santos — MS Serviços. Todos os direitos reservados.</p>
+        <p class="cnpj">CNPJ: 32.673.348/0001-36</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RODAPÉ MONTESITE -->
+  <div id="root"></div>
+  <div id="montesite-footer-badge"></div>
+  <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5581994991014" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    /* ─── MENU MOBILE ─── */
+    function toggleMenu() {
+      document.getElementById('main-nav').classList.toggle('open');
+    }
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => document.getElementById('main-nav').classList.remove('open'));
+    });
+
+    /* ─── TABS MVV ─── */
+    function showTab(tab) {
+      document.querySelectorAll('.mvv-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.mvv-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + tab).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    /* ─── PROGRESSO + PARALLAX + HEADER + NAV ─── */
+    const progressBar  = document.getElementById('progress-bar');
+    const headerEl     = document.getElementById('header');
+    const heroBg       = document.querySelector('.hero-bg');
+    const sections     = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks     = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+
+    function onScroll() {
+      const sy = window.scrollY;
+      const total = document.body.scrollHeight - window.innerHeight;
+
+      // barra de progresso
+      progressBar.style.width = (sy / total * 100) + '%';
+
+      // parallax hero (move bg ligeiramente mais devagar)
+      if (sy < window.innerHeight * 1.5) {
+        heroBg.style.backgroundPosition = `center calc(50% + ${sy * 0.22}px)`;
+      }
+
+      // header sombra
+      if (sy > 40) {
+        headerEl.style.background  = 'rgba(10,20,40,.98)';
+        headerEl.style.boxShadow   = '0 2px 20px rgba(0,0,0,.3)';
+      } else {
+        headerEl.style.background  = 'rgba(10,20,40,.96)';
+        headerEl.style.boxShadow   = 'none';
+      }
+
+      // nav ativa
+      let current = sections[0].id;
+      sections.forEach(s => { if (sy >= s.offsetTop - 120) current = s.id; });
+      navLinks.forEach(a => {
+        const isActive = a.getAttribute('href') === '#' + current;
+        a.classList.toggle('nav-on', isActive && !a.classList.contains('nav-cta'));
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Lightbox
+    const lbImages = [
+      'assets/midias/midia_2.jpg',
+      'assets/midias/midia_4.jpg',
+      'assets/midias/midia_6.jpg',
+      'assets/midias/midia_7.jpg',
+      'assets/midias/midia_9.jpg',
+      'assets/midias/midia_10.jpg',
+      'assets/midias/midia_12.jpg',
+      'assets/midias/midia_13.jpg',
+      'assets/midias/midia_14.jpg',
+      'assets/midias/midia_15.jpg',
+      'assets/midias/midia_17.jpg',
+      'assets/midias/midia_18.jpg',
+    ];
+    let lbCurrent = 0;
+
+    document.querySelectorAll('.galeria-item').forEach(item => {
+      item.addEventListener('click', () => {
+        lbCurrent = parseInt(item.dataset.index);
+        openLightbox();
+      });
+    });
+
+    function openLightbox() {
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = lbImages[lbCurrent];
+      document.getElementById('lb-counter').textContent = (lbCurrent + 1) + ' / ' + lbImages.length;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function lbNav(dir) {
+      lbCurrent = (lbCurrent + dir + lbImages.length) % lbImages.length;
+      const img = document.getElementById('lightbox-img');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = lbImages[lbCurrent];
+        img.style.opacity = '1';
+        document.getElementById('lb-counter').textContent = (lbCurrent + 1) + ' / ' + lbImages.length;
+      }, 180);
+    }
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!document.getElementById('lightbox').classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') lbNav(-1);
+      if (e.key === 'ArrowRight') lbNav(1);
+    });
+
+    /* ─── SCROLL REVEAL ─── */
+    const srObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('on'); srObserver.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+
+    // Aplica classes e observa automaticamente
+    function setupReveal(sel, cls, delays) {
+      document.querySelectorAll(sel).forEach((el, i) => {
+        el.classList.add(cls);
+        if (delays && i > 0) el.classList.add('d' + Math.min(i, 8));
+        srObserver.observe(el);
+      });
+    }
+
+    setupReveal('.servico-card',    'sr-scale', true);
+    setupReveal('.produto-card',    'sr',       true);
+    setupReveal('.mercado-item',    'sr',       true);
+    setupReveal('.dep-card',        'sr',       true);
+    setupReveal('.contato-item',    'sr',       true);
+    setupReveal('.footer-col',      'sr',       true);
+    setupReveal('.galeria-header',  'sr');
+    setupReveal('.dep-header > *',  'sr',       true);
+    setupReveal('.servicos-header > *', 'sr',   true);
+    setupReveal('.produtos-header > *', 'sr',   true);
+    setupReveal('.mercados-header > *', 'sr',   true);
+
+    // Sobre — visual da esquerda, texto da direita
+    document.querySelectorAll('.sobre-visual').forEach(el => {
+      el.classList.add('sr-left'); srObserver.observe(el);
+    });
+    document.querySelectorAll('.sobre-text > *').forEach((el, i) => {
+      el.classList.add('sr-right');
+      if (i > 0) el.classList.add('d' + Math.min(i, 8));
+      srObserver.observe(el);
+    });
+
+    /* ─── CONTADOR ANIMADO ─── */
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el     = e.target;
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const dur    = 1800;
+        let start    = null;
+        function tick(ts) {
+          if (!start) start = ts;
+          const p   = Math.min((ts - start) / dur, 1);
+          const ease = 1 - Math.pow(1 - p, 4); // ease-out quart
+          el.textContent = Math.floor(ease * target) + suffix;
+          if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        counterObs.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+
+    document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+  </script>
+</body>
+</html>
